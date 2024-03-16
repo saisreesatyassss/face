@@ -1,0 +1,54 @@
+@import '@styles/variable.scss';
+
+.skillSection {
+    position: relative;
+    padding: 50px 0;
+
+    .subtitle {
+        color: $primaryTextColor;
+        letter-spacing: 2px;
+        display: block;
+        line-height: 14px;
+        font-weight: $font-700;
+        text-transform: uppercase;
+        font-size: $font-14;
+    }
+
+    .skillDetails {
+        background: $primaryGradient;
+        display: flex;
+        align-items: flex-start;
+        padding: 30px;
+        box-shadow: $tertiaryShadow;
+        border-radius: 10px;
+        margin: 40px auto 0;
+        width: 90%;
+
+        > div {
+            padding: 10px;
+
+            h4 {
+                line-height: 60px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .skillSection {
+        h2 {
+            font-size: 50px;
+        }
+        .subtitle {
+            font-size: $font-12;
+        }
+        .skillDetails {
+            h4 {
+                font-size: $font-26;
+            }
+        }
+    }
+}

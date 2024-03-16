@@ -1,0 +1,156 @@
+@import '@styles/variable.scss';
+
+.educationSection {
+    position: relative;
+    padding: 50px 0;
+
+    .subtitle {
+        color: $primaryTextColor;
+        letter-spacing: 2px;
+        display: block;
+        line-height: 14px;
+        font-weight: $font-700;
+        text-transform: uppercase;
+        font-size: $font-14;
+    }
+
+    .educationDetails {
+        background: $primaryGradient;
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        box-shadow: $tertiaryShadow;
+        border-radius: 10px;
+        margin: 40px auto 0;
+        width: 90%;
+        flex-wrap: wrap;
+
+        .educationImage {
+            max-width: 250px;
+            max-height: 150px;
+            height: auto;
+            border-radius: 8px;
+            transition: $secondaryTransition;
+            overflow: hidden;
+            flex: 1 1 100%;
+            aspect-ratio: 1/1;
+
+            > img {
+                border-radius: 8px;
+                transition: $secondaryTransition;
+            }
+        }
+
+        .educationInfo {
+            flex: 1 1 200px;
+            padding-left: 30px;
+            cursor: pointer;
+
+            > a {
+                > span {
+                    padding: 2px 8px;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    background-color: $primaryTextColor;
+                    color: $white;
+                }
+
+                > h4 {
+                    margin-top: 10px;
+                    font-size: $font-24;
+                    color: $secondaryTextColor;
+                }
+
+                > h6 {
+                    margin-top: 15px;
+                    font-size: $font-20;
+                    font-weight: $font-400;
+                    margin-bottom: 10px;
+                    line-height: 1.5;
+                    color: $bodyColor;
+                }
+
+                &:hover {
+                    > h4 {
+                        color: $primaryTextColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+    .educationSection {
+        .educationDetails {
+            .educationImage {
+                max-width: 100%;
+                max-height: 320px;
+            }
+            .educationInfo {
+                margin-top: 20px;
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .educationSection {
+        h2 {
+            font-size: 50px;
+        }
+        .subtitle {
+            font-size: $font-12;
+        }
+        .educationDetails {
+            .educationImage {
+                max-width: 100%;
+                max-height: 250px;
+            }
+            .educationInfo {
+                margin-top: 20px;
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .educationSection {
+        .educationDetails {
+            .educationImage {
+                max-width: 100%;
+                max-height: 180px;
+            }
+            .educationInfo {
+                margin-top: 20px;
+                padding: 0;
+            }
+        }
+    }
+}
+
+.certificationSection {
+    position: relative;
+    padding: 50px 0;
+
+    .subtitle {
+        color: $primaryTextColor;
+        letter-spacing: 2px;
+        display: block;
+        line-height: 14px;
+        font-weight: $font-700;
+        text-transform: uppercase;
+        font-size: $font-14;
+    }
+
+    h2 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .wrapper {
+        margin: 30px 5px 0 5px;
+    }
+}

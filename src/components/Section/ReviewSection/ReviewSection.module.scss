@@ -1,0 +1,149 @@
+@import '@styles/variable.scss';
+
+.customModalHeading {
+    font-size: $font-26;
+}
+
+.contentImage {
+    border-radius: 50%;
+    float: left;
+    width: 125px;
+    border: 2px solid $borderColor;
+    margin-right: 10px;
+}
+.customModalContent {
+    margin: 0 0 10px 0;
+    p {
+        font-size: $font-20;
+        text-align: justify;
+    }
+}
+
+.reviewSection {
+    margin-top: 60px;
+    padding: 20px 0;
+    border-bottom: 1px solid $borderColor;
+
+    .reviewContainer {
+        margin-top: 50px;
+        margin-bottom: 60px;
+        box-shadow: $tertiaryShadow;
+        border: 0;
+        border-radius: 10px;
+        background: $primaryGradient;
+        padding: 10px 0;
+
+        > div {
+            button:nth-child(2) {
+                left: calc(1% + 1px);
+            }
+            button:nth-child(3) {
+                right: calc(1% + 1px);
+            }
+        }
+
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                border-radius: 50%;
+                width: 100px;
+            }
+        }
+
+        .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+            div {
+                max-width: 85%;
+                text-align: justify;
+                p {
+                    font-size: $font-16;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        .readMore {
+            display: none;
+
+            button {
+                box-shadow: none;
+                background: none;
+
+                &:hover {
+                    transform: none;
+                    color: $primaryTextColor;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .reviewerInfo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 10px 10px 30px 10px;
+            p {
+                font-size: $font-20;
+                margin-bottom: 0;
+            }
+            span {
+                font-size: $font-20;
+                color: $textLight;
+            }
+        }
+    }
+}
+
+.subtitle {
+    color: $primaryTextColor;
+    letter-spacing: 2px;
+    display: block;
+    line-height: 14px;
+    font-weight: $font-700;
+    text-transform: uppercase;
+    font-size: $font-14;
+}
+
+@media only screen and (max-width: 768px) {
+    .reviewSection {
+        h2 {
+            font-size: $font-40;
+        }
+        .subtitle {
+            font-size: $font-12;
+        }
+
+        .reviewParent {
+            margin-left: 5px !important;
+            margin-right: 5px !important;
+
+            .reviewContainer {
+                .text {
+                    div {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 9;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+
+                        p {
+                            font-size: $font-16;
+                            text-align: justify;
+                        }
+                    }
+                }
+
+                .readMore {
+                    display: block;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
